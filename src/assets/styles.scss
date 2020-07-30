@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import "./checkbox.scss";
+
+$primary: #2196f3;
+$hover: #f1fcff;
+$first-font-color: #4a4a4a;
+$second-font-color: #a0b0b9;
+$background: #f3f7fa;
+
+body {
+  background: $background;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.border {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  color: $first-font-color;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.second-color {
+  color: $second-font-color;
+}
+
+.active {
+  background: $primary;
+  color: #fff;
+}
+
+.tickets {
+  &__header {
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__main {
+    display: flex;
+  }
+
+  &__filters {
+    padding: 20px 0;
+    margin-right: 20px;
+    width: 230px;
+    max-height: 251px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    color: $first-font-color;
+    box-sizing: border-box;
+  }
+
+  &__filters_title {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &__filters_list {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    list-style: none;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__mostBtns {
+    padding-bottom: 20px;
+    display: flex;
+  }
+
+  &__cheap {
+    flex-basis: 50%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &__fast {
+    flex-basis: 50%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &__ticket {
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &__ticket_header {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: $primary;
+  }
+
+  &__ticket_img {
+    padding-right: 30px;
+    width: 110px;
+  }
+
+  &__ticket_routes {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: $first-font-color;
+
+    &:not(:last-child) {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__ticket_route,
+  &__ticket_length,
+  &__ticket_stops {
+    width: 140px;
+  }
+}
